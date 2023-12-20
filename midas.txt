@@ -1,0 +1,20 @@
+Projekte zukünftig auf google drive speichern um Fehler und Redundanz zu vermeiden
+Der Kurs hat mir sehr geholfen das Midas Modell zu verstehen.
+
+urllib.request.urlretrieve(url, filename)#
+Urlib.request sind Module.
+urlretrieve ist eine Methode welche als ersten Parameter den Pfad zu einer Datei übergeben und runtergeladen wird.
+Dem zweiten Parameter wird diese Datei übergeben und unter dem Namen des Parameter im aktuellen Verzeichnis gespeichert.
+
+torch.hub.load(repo, modell) lädt aus dem PyTorch Github repository gewünschte vortrainierte Modelle herunter. Repo steht für gewählte Repository und Modell für das Modell.
+Diese Modell wird im Aktuellen Arbeitsverzeichnis gespeichert (das ist ein Default Paramter, kann geändert weerden indem der load funktion ein dritter Parameter namen destination übergeben wird). Es gibt einen vierten parameter trust_repo = True/False.
+
+Python variabeln haben einen anderen geltungsbereich als z.B.: Java sie gelten immer im ganzen Modul oder der ganzen Funktion
+
+opencv, sehr interessantes framework, wird zur verarbeitung von bild, audio Dateine etc. verwendet. Eignet sich möglicherweise für pre-postprocessing. Mit methoden wie cv2.VideoCapture(0) wird auf die erst beste Kamera des os zugegriffen, genial einfach.
+Scheinbar ist opencv nicht mit der standard GUI bibliothek von Python kompatibel, Visualisierung mit imshow() war schlug fehl. War schwer zu lösen. es musst ein Backend für opencv installiert werden: !!!conda/pip install opencv-python-headless[qt]!!! Super wichtiger Befehl!!!!!!
+
+unter with.torch.inference_mode() hat der code eine bessere Performance als torch.no_grad(), sollte nicht im training mode genutzt da es errors raised wenn autograd aktiviert ist
+
+
+Histogramm erstellen

@@ -13,8 +13,8 @@ transforms = torch.hub.load('intel-isl/MiDaS', 'transforms')
 transform = transforms.small_transform
 
 
-cap = cv2.VideoCapture(0) # stellt verbindung zur erst besten Kamera her
-while cap.isOpened(): # Schleife die so lange läuft wie die Kamera geöffnet ist
+cap = cv2.VideoCapture(0) 
+while cap.isOpened():
     ret, frame = cap.read()
     
     # Transform input for midas
@@ -40,7 +40,7 @@ while cap.isOpened(): # Schleife die so lange läuft wie die Kamera geöffnet is
     plt.pause(0.00001)
     
     if cv2.waitKey(10) & 0xFF == ord('q'):
-        cap.release() # gibt Kamera für andere Anwendungen wieder frei
+        cap.release()
         cv2.destroyAllWindows()
 
 plt.show
